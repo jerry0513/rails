@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  describe: MyText
+  job: MyText
+  require: MyText
+  contact: MyText
+  publish_date: 2018-03-27
+  is_online: false
+
+two:
+  title: MyString
+  describe: MyText
+  job: MyText
+  require: MyText
+  contact: MyText
+  publish_date: 2018-03-27
+  is_online: false

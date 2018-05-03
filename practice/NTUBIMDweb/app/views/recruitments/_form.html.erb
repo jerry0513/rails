@@ -1,0 +1,52 @@
+<%= form_with(model: recruitment, local: true) do |form| %>
+  <% if recruitment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(recruitment.errors.count, "error") %> prohibited this recruitment from being saved:</h2>
+
+      <ul>
+      <% recruitment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :recruitment_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :describe %>
+    <%= form.text_area :describe, id: :recruitment_describe %>
+  </div>
+
+  <div class="field">
+    <%= form.label :job %>
+    <%= form.text_area :job, id: :recruitment_job %>
+  </div>
+
+  <div class="field">
+    <%= form.label :require %>
+    <%= form.text_area :require, id: :recruitment_require %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact %>
+    <%= form.text_area :contact, id: :recruitment_contact %>
+  </div>
+
+  <div class="field">
+    <%= form.label :publish_date %>
+    <%= form.date_select :publish_date, id: :recruitment_publish_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_online %>
+    <%= form.check_box :is_online, id: :recruitment_is_online %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
